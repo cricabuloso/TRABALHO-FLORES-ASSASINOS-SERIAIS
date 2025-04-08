@@ -1,33 +1,419 @@
-/* Estilo geral do corpo da página */
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;    
+}
+
+p{
+    text-align: justify;
+}
+
+footer{
+    height:50px;
+    text-align: center;
+    background-color: #4e0404;
+}
+
+
+.flex-container{
+    text-align: center;
+    background-color: #000000;
+}
+
+.banner{ 
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima da imagem */
+    border-radius: 25px; /* Define cantos arredondados */
+    box-shadow: 0 4px 230px rgba(211, 15, 15, 0.3); /* Sombra suave para a imagem */
+}
+
+
+
+/* Barra de navegação */
+.navbar {
+    background-color: #000000;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-/* Estilo da caixa */
-.box {
-    background-color: #ffffff; /* Cor de fundo da caixa */
-    border: 2px solid #4CAF50; /* Borda da caixa */
-    border-radius: 10px; /* Cantos arredondados */
-    padding: 20px; /* Preenchimento dentro da caixa */
-    width: 300px; /* Largura da caixa */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da caixa */
-    text-align: center; /* Alinha o conteúdo ao centro */
+.nav-links li {
+    margin: 0 15px;
 }
 
-/* Estilo do título */
-.box h2 {
-    color: #4CAF50; /* Cor do título */
-    margin-bottom: 10px; /* Espaço abaixo do título */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
-/* Estilo do parágrafo dentro da caixa */
-.box p {
-    color: #555555; /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte */
+.nav-links a:hover {
+    background-color: #5a0909;
+    border-radius: 5px;
 }
+
+.destaque{
+     color: #790707;
+}
+
+.destaque2{
+    background-color: rgba(255, 0, 0, 0.705);
+}
+
+/* Seção inicial */
+.home-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #000000;
+    margin-bottom: -80px;
+    margin-top: -20px;
+    
+}
+
+.home-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.home-section p {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 1000px;
+    margin-left: 10%;
+    background-color: #292626;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Seção Assassinos Seriais */
+.killers-section {
+    padding: 50px 20px;
+    background-color: #000000;
+}
+
+.killers-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #910202;
+    
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    background-color: #5a0909;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Efeito de hover nos cartões */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção Sobre */
+.about-section {
+    background-color: #1f1e1e;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.imgassasinos{
+    width: 400px;
+    height: 300px;
+    float: left;
+    clip-path: ellipse(40% 50%);
+    shape-outside: ellipse(45% 50%);
+}
+
+.imgassasinosRichard{
+    width: 400px;
+    height: 300px;
+    float: left;
+    margin-left: -40px;
+    clip-path: ellipse(40% 50%);
+    shape-outside: ellipse(45% 50%);
+}
+
+
+
+.ReturnLogo{
+    width: 120px;
+    height: 120px;
+    margin-right: -10px;
+    float: inline-end;
+    clip-path: ellipse(30% 40%);
+    shape-outside: ellipse(35% 40%);
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .home-section p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-section h1 {
+        font-size: 28px;
+    }
+
+    .home-section p {
+        font-size: 16px;
+        width: 95%;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .imgassasinos {
+        width: 90%;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-section h1 {
+        font-size: 24px;
+    }
+
+    .home-section p {
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+/*Carrosel de Imagens*/
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    background-color: #00000010;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Pagina A psicologia dos assasinos */
+.titulo {
+    text-align: center;
+    font-size: 2em;
+    color: #8b0000;
+    margin-top: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.conteudo-artigo {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    line-height: 1.7;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.conteudo-artigo p {
+    margin-bottom: 20px;
+}
+
+.citacao {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+}
+
+/* Pagina investigação e captura */
+
+.header-dossie {
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    padding: 40px 20px;
+    border-bottom: 5px solid #8b0000;
+}
+
+.header-dossie h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.dossie-conteudo {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #222;
+    background-color: #b3a0a0;
+}
+
+.secao-detalhes h3, .secao-francisco h3, .secao-final h3 {
+    color: #8b0000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #ccc;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+.citacao {
+    font-style: italic;
+    color: #333;
+    margin-top: 20px;
+}
+
+.destaque {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.destaque2 {
+    font-weight: bold;
+    color: #8b0000;
+}
+

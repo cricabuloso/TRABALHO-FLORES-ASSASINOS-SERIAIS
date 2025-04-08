@@ -1,33 +1,25 @@
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const carrossel = document.querySelector('.carrossel');
+{
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
 
-let index = 0; // Índice do card atual
-const cards = document.querySelectorAll('.card');
-const totalCards = cards.length;
+    let index = 0;
 
-function updateCarrossel() {
-    // Calcula o deslocamento com base no índice atual
-    const offset = -index * 220; // 220 é a largura dos cards (incluindo margens)
-    carrossel.style.transform = `translateX(${offset}px)`;
-}
-
-nextBtn.addEventListener('click', () => {
-    // Avançar para o próximo card
-    if (index < totalCards - 1) {
-        index++;
-    } else {
-        index = 0; // Voltar ao primeiro card
+    function updateCarousel() {
+        const width = images[0].clientWidth;
+        carousel.style.transform = `translateX(${-width * index}px)`;
     }
-    updateCarrossel();
-});
 
-prevBtn.addEventListener('click', () => {
-    // Voltar para o card anterior
-    if (index > 0) {
-        index--;
-    } else {
-        index = totalCards - 1; // Voltar ao último card
-    }
-    updateCarrossel();
-});
+    nextBtn.addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+};
