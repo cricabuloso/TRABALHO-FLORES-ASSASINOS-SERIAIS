@@ -1,0 +1,33 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo da caixa */
+.box {
+    background-color: #ffffff; /* Cor de fundo da caixa */
+    border: 2px solid #4CAF50; /* Borda da caixa */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Preenchimento dentro da caixa */
+    width: 300px; /* Largura da caixa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da caixa */
+    text-align: center; /* Alinha o conteúdo ao centro */
+}
+
+/* Estilo do título */
+.box h2 {
+    color: #4CAF50; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Estilo do parágrafo dentro da caixa */
+.box p {
+    color: #555555; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
